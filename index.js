@@ -9,8 +9,7 @@ http.createServer(function(req,res){
  
 
     fs.readFile(filename, function (err,data){
-        if (err){
-            //todo: point to 404 file 
+        if (err){ 
             res.writeHead(404,{'Content-Type': 'text/html'});
             res.write(`<H1> 404 Error</H1> <br/> <a href='./''>Go back to home</a>`);
             return res.end();
